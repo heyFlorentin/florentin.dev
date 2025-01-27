@@ -1,7 +1,7 @@
 {
   "name": "blog",
   "type": "module",
-  "version": "1.3.0",
+  "version": "1.3.1",
   "description": "Source code to WeMake's creator blog.",
   "author": "Florentin Sakwiset <florentin@wemake.cx> (https://github.com/heyFlorentin)",
   "engines": {
@@ -17,14 +17,14 @@
     "release": "bumpp"
   },
   "dependencies": {
-    "@astrojs/check": "^0.9.3",
-    "@astrojs/cloudflare": "^11.0.4",
-    "@astrojs/mdx": "^3.1.5",
-    "@astrojs/rss": "^4.0.7",
-    "@astrojs/sitemap": "^3.1.6",
-    "@astrojs/vue": "^4.5.0",
+    "@astrojs/check": "0.9.4",
+    "@astrojs/cloudflare": "12.2.1",
+    "@astrojs/mdx": "4.0.7",
+    "@astrojs/rss": "4.0.11",
+    "@astrojs/sitemap": "3.2.1",
+    "@astrojs/vue": "5.0.6",
     "@unocss/reset": "^0.61.0",
-    "astro": "^4.15.1",
+    "astro": "5.1.10",
     "nprogress": "^0.2.0",
     "typescript": "^5.5.4",
     "unocss": "^0.61.0",
@@ -50,6 +50,6 @@
     "pre-commit": "npx lint-staged"
   },
   "lint-staged": {
-    "*": "npm run lint:fix"
+    "*": "bun run lint:fix"
   }
 }
