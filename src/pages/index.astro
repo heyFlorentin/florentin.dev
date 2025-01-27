@@ -8,10 +8,9 @@ import siteConfig from '@/site-config'
     <h1 class="text-title">Hey, 👋</h1>
     <h2>ich bin Florentin.</h2>
     <p>
-      Auf diesem Blog teile ich meine Gedanken, Erfahrungen und Learnings - von
-      persönlichen Herausforderungen bis hin zu technologischen Innovationen.
-      Ich glaube an die Kraft der Veränderung und daran, dass wir gemeinsam die
-      Welt zu einem besseren Ort machen können.
+      Auf diesem Blog teile ich meine Gedanken, Erfahrungen und Learnings - von persönlichen Herausforderungen bis hin
+      zu technologischen Innovationen. Ich glaube an die Kraft der Veränderung und daran, dass wir gemeinsam die Welt zu
+      einem besseren Ort machen können.
     </p>
     <p class="flex gap-x-4 gap-y-2 flex-wrap">
       <a aria-label="Blog" href="/blog" class="prose-link">Zum Blog </a>
@@ -20,12 +19,7 @@ import siteConfig from '@/site-config'
     <p class="flex gap-x-4 gap-y-2 flex-wrap">
       {
         siteConfig.socialLinks.map((link) => (
-          <a
-            aria-label={link.text}
-            href={link.href}
-            target="_blank"
-            class="prose-link"
-          >
+          <a aria-label={link.text} href={link.href} target="_blank" class="prose-link">
             <i class:list={[link.icon]} />
             {link.text}
           </a>
