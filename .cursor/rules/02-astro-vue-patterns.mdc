@@ -1,0 +1,34 @@
+---
+globs: *.astro,*.vue
+---
+
+# Astro + Vue patterns
+
+## Rendering model
+
+- SSR is enabled via the Cloudflare adapter in [astro.config.ts](mdc:astro.config.ts) (`output: 'server'`).
+- For routes that do not need SSR (e.g., static legal pages), add in that page file:
+
+```ts
+export const prerender = true;
+```
+
+## Composition
+
+- Prefer Astro pages/markdown for content and structure; mount Vue as islands for interactive pieces only.
+- Keep Vue components focused and small. Example references: [src/components/Header.vue](mdc:src/components/Header.vue),
+  [src/components/ListPosts.vue](mdc:src/components/ListPosts.vue).
+- Use utilities for data loading and sorting: [src/utils/posts.ts](mdc:src/utils/posts.ts),
+  [src/utils/link.ts](mdc:src/utils/link.ts).
+
+## Routing
+
+- Index and landing: [src/pages/index.astro](mdc:src/pages/index.astro)
+- Catch-all content routes: [src/pages/[...slug].astro](mdc:src/pages/[...slug].astro),
+  [src/pages/blog/[...path].astro](mdc:src/pages/blog/[...path].astro)
+- Layouts: [src/layouts/BaseLayout.astro](mdc:src/layouts/BaseLayout.astro)
+
+## Styling
+
+- Prefer UnoCSS utilities configured in [uno.config.ts](mdc:uno.config.ts) and existing styles:
+  [src/styles/global.css](mdc:src/styles/global.css), [src/styles/prose.css](mdc:src/styles/prose.css).

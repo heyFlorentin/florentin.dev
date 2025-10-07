@@ -1,0 +1,36 @@
+---
+globs: *.ts,*.tsx,*.astro,*.vue
+---
+
+# Coding style and TypeScript conventions
+
+## General
+
+- ESM only. Use `import`/`export`; avoid CommonJS.
+- Match repository formatting and Prettier settings in [.prettierrc.yaml](mdc:.prettierrc.yaml) (e.g.,
+  `printWidth: 120`, `trailingComma: none`, `endOfLine: lf`).
+- Prefer multi-line clarity over dense one-liners.
+- Comments only for non-obvious rationale, invariants, or caveats.
+
+## TypeScript
+
+- Annotate exported/public APIs. Avoid `any` and unsafe casts.
+- Prefer precise/narrow types. Model domain concepts explicitly.
+- No ambient globals. Prefer module-local utilities and explicit imports.
+
+## Control flow and errors
+
+- Prefer guard clauses and early returns to deep nesting.
+- Use try/catch sparingly and handle errors meaningfully; do not swallow.
+- Keep functions short and focused. Extract helpers when complexity grows.
+
+## Naming
+
+- Use descriptive names. Functions as verbs, variables as nouns.
+- Avoid abbreviations. Favor full words that carry intent.
+
+## Astro and Vue specifics
+
+- In `.astro` files, keep top-of-file script minimal and push logic into typed utilities where possible.
+- In `.vue` components, keep island code lean; avoid heavy global state. Co-locate styles with components when
+  appropriate.
