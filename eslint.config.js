@@ -8,4 +8,5 @@ export default antfu({
     astro: true,
     css: true,
   },
+  jsonc: false,
 })

@@ -2,18 +2,9 @@
 # Prettier configuration
 # https://prettier.io/docs/en/configuration.html
 
-trailingComma: none
+trailingComma: es5
 printWidth: 120
 proseWrap: always
 endOfLine: lf
-overrides:
-  - files: |
-      "*.yaml"
-      "*.yml"
-    options:
-      proseWrap: never
-      objectWrap: collapse
-  - files: |
-      "*/**/*.mdc"
-    options:
-      parser: markdown
+semi: false
+singleQuote: true
