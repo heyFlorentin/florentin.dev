@@ -13,7 +13,8 @@
     "build": "astro check && astro build",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "release": "bumpp"
+    "release": "bumpp",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@astrojs/check": "0.9.4",
@@ -47,9 +48,9 @@
     "simple-git-hooks": "^2.11.1"
   },
   "simple-git-hooks": {
-    "pre-commit": "npx lint-staged"
+    "pre-commit": "bunx lint-staged"
   },
   "lint-staged": {
-    "*": "npm run lint:fix"
+    "*": "bun run lint:fix"
   }
 }
