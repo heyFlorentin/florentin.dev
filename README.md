@@ -2,15 +2,18 @@
 
 Hey, 👋
 
-This is the source code for the WeMake Creator Experience Blog. We built it using Astro, a super fast and modern static site generator.
+This is the source code for the WeMake Creator Experience Blog. We built it using Astro, a super fast and modern static
+site generator.
 
 ## Why Astro?
 
 We 💙 Astro because it's:
 
-- **Blazingly fast:** Astro is all about performance. It delivers lightning-fast websites that provide an awesome user experience.
+- **Blazingly fast:** Astro is all about performance. It delivers lightning-fast websites that provide an awesome user
+  experience.
 - **Easy to use:** Astro's syntax is intuitive and beginner-friendly, making it a breeze to build our blog.
-- **Flexible and extensible:** Astro plays nicely with our favorite UI libraries like Vue, React, and Svelte. Plus, its growing ecosystem of integrations and plugins gives us the tools we need to customize our blog just the way we want.
+- **Flexible and extensible:** Astro plays nicely with our favorite UI libraries like Vue, React, and Svelte. Plus, its
+  growing ecosystem of integrations and plugins gives us the tools we need to customize our blog just the way we want.
 
 ## Getting Started
 

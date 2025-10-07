@@ -8,10 +8,7 @@ const toggleDark = useToggle(isDark)
 function toggleTheme(event: MouseEvent) {
   const x = event.clientX
   const y = event.clientY
-  const endRadius = Math.hypot(
-    Math.max(x, innerWidth - x),
-    Math.max(y, innerHeight - y),
-  )
+  const endRadius = Math.hypot(Math.max(x, innerWidth - x), Math.max(y, innerHeight - y))
   // @ts-expect-error: Transition API
   if (!document.startViewTransition) {
     toggleDark()
@@ -24,10 +21,7 @@ function toggleTheme(event: MouseEvent) {
   })
 
   transition.ready.then(() => {
-    const clipPath = [
-      `circle(0px at ${x}px ${y}px)`,
-      `circle(${endRadius}px at ${x}px ${y}px)`,
-    ]
+    const clipPath = [`circle(0px at ${x}px ${y}px)`, `circle(${endRadius}px at ${x}px ${y}px)`]
     document.documentElement.animate(
       {
         clipPath: isDark.value ? [...clipPath].reverse() : clipPath,
@@ -35,9 +29,7 @@ function toggleTheme(event: MouseEvent) {
       {
         duration: 400,
         easing: 'ease-in',
-        pseudoElement: isDark.value
-          ? '::view-transition-old(root)'
-          : '::view-transition-new(root)',
+        pseudoElement: isDark.value ? '::view-transition-old(root)' : '::view-transition-new(root)',
       },
     )
   })

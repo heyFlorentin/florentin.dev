@@ -1,0 +1,13 @@
+{
+  "name": "florentin-dev",
+  "main": "./dist/_worker.js/index.js",
+  "compatibility_date": "2025-10-06",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist"
+  },
+  "observability": {
+    "enabled": true
+  }
+}

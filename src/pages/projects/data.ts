@@ -38,36 +38,31 @@ export const projectData: ProjectData = [
       },
       {
         text: 'CX Blog',
-        description:
-          'Einblicke & Geschichten aus der Creator Experience Community -  lass dich inspirieren!',
+        description: 'Einblicke & Geschichten aus der Creator Experience Community -  lass dich inspirieren!',
         icon: 'i-carbon-campsite',
         href: 'https://github.com/WeMake-CX/blog',
       },
       {
         text: 'Intelligent Content Understanding',
-        description:
-          'ICU: LLMs verstehen Inhalte tiefgründig & fördern kreative Lösungen durch vernetztes Wissen.',
+        description: 'ICU: LLMs verstehen Inhalte tiefgründig & fördern kreative Lösungen durch vernetztes Wissen.',
         icon: 'i-carbon-campsite',
         href: 'https://huggingface.co/datasets/WeMake/Intelligent-Content-Understanding',
       },
       {
         text: 'Llama-3-8B-Instruct-V41-1048k',
-        description:
-          'Unser fortschrittliches Sprachmodell: Einfühlsame Interaktionen & ethische KI-Anwendungen.',
+        description: 'Unser fortschrittliches Sprachmodell: Einfühlsame Interaktionen & ethische KI-Anwendungen.',
         icon: 'i-carbon-campsite',
         href: 'https://huggingface.co/WeMake/Llama-3-8B-Instruct-V41-1048k',
       },
       {
         text: 'LUNA-ProACT',
-        description:
-          'Echtzeitschutz vor Online-Bedrohungen & Cybergrooming-Prävention auf deinem Handy.',
+        description: 'Echtzeitschutz vor Online-Bedrohungen & Cybergrooming-Prävention auf deinem Handy.',
         icon: 'i-carbon-campsite',
         href: 'https://huggingface.co/WeMake/LUNA-ProACT',
       },
       {
         text: 'VX-Unholy-13B',
-        description:
-          'Open-Source-LLM für mehr Einfühlungsvermögen & ethische KI-Entwicklung. Sei dabei!',
+        description: 'Open-Source-LLM für mehr Einfühlungsvermögen & ethische KI-Entwicklung. Sei dabei!',
         icon: 'i-carbon-campsite',
         href: 'https://huggingface.co/WeMake/VX-Unholy-13B',
       },
