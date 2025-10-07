@@ -1,0 +1,55 @@
+---
+alwaysApply: true
+---
+
+# Cloudflare Workers deployment (SSR)
+
+Deploy this Astro site to Cloudflare Workers (not Pages). The Cloudflare adapter is already configured in
+[astro.config.ts](mdc:astro.config.ts) with `output: 'server'`.
+
+## Commands (Bun)
+
+- Build: `bunx astro build`
+- Deploy: `bunx wrangler deploy`
+
+## Wrangler configuration (example: `wrangler.jsonc`)
+
+Place at the repository root if not already present. Adjust `name` as needed.
+
+```jsonc
+{
+  "name": "florentin-dev",
+  "main": "./dist/_worker.js/index.js",
+  "compatibility_date": "2025-03-07",
+  "compatibility_flags": ["nodejs_compat"],
+  "assets": {
+    "binding": "ASSETS",
+    "directory": "./dist"
+  },
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1
+  }
+}
+```
+
+## Asset upload exclusions
+
+Add `public/.assetsignore` with:
+
+```
+_worker.js
+_routes.json
+```
+
+## Prerendering guidance
+
+- SSR is default. For routes that do not need SSR, add in that page file:
+
+```ts
+export const prerender = true;
+```
+
+## Reference
+
+- Cloudflare Workers + Astro guide: https://developers.cloudflare.com/workers/framework-guides/web-apps/astro/

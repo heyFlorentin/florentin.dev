@@ -1,0 +1,37 @@
+---
+globs: src/content/**/*.md,src/content/**/*.mdx
+---
+
+# Content authoring guidelines
+
+## Collections and placement
+
+- Follow the collection schema defined in [src/content/config.ts](mdc:src/content/config.ts).
+- Blog posts live under `src/content/blog/**`. Additional sections may have their own subfolders.
+
+## Frontmatter
+
+Use concise, complete frontmatter per the schema. Typical fields:
+
+```yaml
+---
+title: Your post title
+description: One-sentence summary
+date: 2025-10-07
+tags:
+  - tag-one
+  - tag-two
+draft: false
+---
+```
+
+## Media and links
+
+- Store images in `public/images/` and reference them with relative paths (they will be served statically).
+- External links open according to site logic; use helpers like [src/utils/link.ts](mdc:src/utils/link.ts) when
+  relevant.
+
+## Slugs and routing
+
+- Filenames typically define slugs and are resolved by dynamic routes such as
+  [src/pages/[...slug].astro](mdc:src/pages/[...slug].astro).

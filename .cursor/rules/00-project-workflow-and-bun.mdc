@@ -1,0 +1,44 @@
+---
+alwaysApply: true
+---
+
+# Project workflow and Bun-only policy
+
+This repository is an Astro + Vue site deployed to Cloudflare Workers. Use Bun for all Node-related tasks; do not use
+npm/yarn/pnpm.
+
+## Project structure quick map
+
+- Config: [astro.config.ts](mdc:astro.config.ts), [uno.config.ts](mdc:uno.config.ts),
+  [.prettierrc.yaml](mdc:.prettierrc.yaml)
+- Pages and routing: [src/pages/index.astro](mdc:src/pages/index.astro),
+  [src/pages/[...slug].astro](mdc:src/pages/[...slug].astro),
+  [src/pages/blog/[...path].astro](mdc:src/pages/blog/[...path].astro)
+- Layouts: [src/layouts/BaseLayout.astro](mdc:src/layouts/BaseLayout.astro)
+- Components (Vue islands): [src/components/Header.vue](mdc:src/components/Header.vue),
+  [src/components/ListPosts.vue](mdc:src/components/ListPosts.vue)
+- Content config and data helpers: [src/content/config.ts](mdc:src/content/config.ts),
+  [src/utils/posts.ts](mdc:src/utils/posts.ts), [src/utils/link.ts](mdc:src/utils/link.ts)
+- Styles: [src/styles/prose.css](mdc:src/styles/prose.css), [src/styles/global.css](mdc:src/styles/global.css)
+
+## Bun-only commands
+
+- Install: `bun install`
+- Dev server: `bun dev` (port 1312; see [astro.config.ts](mdc:astro.config.ts))
+- Build:
+  - Preferred: `bunx astro build`
+  - Or if a script exists: `bun run build`
+- Preview (optional): `bunx astro preview`
+
+## Deploy (Cloudflare Workers)
+
+- Build: `bunx astro build`
+- Deploy: `bunx wrangler deploy`
+
+The SSR Worker entry is emitted at `dist/_worker.js/index.js`. Static assets and other adapter outputs are emitted under
+`dist/`.
+
+## Notes
+
+- Output is configured for SSR via Cloudflare adapter in [astro.config.ts](mdc:astro.config.ts).
+- Prefer UNO utility classes per [uno.config.ts](mdc:uno.config.ts).
