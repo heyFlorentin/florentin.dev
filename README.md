@@ -18,33 +18,29 @@ Want to spin up the WeMake CX Blog on your local machine? Sweet! Just follow the
 
 1. **Clone the repository:**
 
-   ```bash
+   ```sh
    git clone https://github.com/WeMake-CX/blog.git
    ```
 
 2. **Navigate to the project directory:**
 
-   ```bash
+   ```sh
    cd blog
    ```
 
 3. **Install the dependencies:**
 
-   ```bash
-   npm install
+   ```sh
+   bun install
    ```
 
 4. **Start the development server:**
 
-   ```bash
-   npm run dev
+   ```sh
+   bun dev
    ```
 
 Now you can check out the blog in action by visiting `http://localhost:1312/` in your browser.
-
-## Contributing
-
-We're stoked about building an awesome community around the WeMake CX Blog. If you're interested in contributing, check out our [contribution guidelines](CONTRIBUTING.md) for more info.
 
 ## License
 
